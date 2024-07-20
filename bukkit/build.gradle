@@ -1,14 +1,19 @@
 repositories {
     maven { url "https://repo.codemc.io/repository/nms" }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://repo.hpfxd.com/releases/' }
 }
 
 dependencies {
-    // -- bukkit-versions --
-    project(":bukkit:mcversion").getSubprojects().forEach(mcv -> implementation mcv)
+    // -- bossbar
+    implementation 'com.hpfxd:bossbarlib:1.0.0'
+
+    // -- vault api --
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7.1'
 
     // -- spigot api -- (base)
-    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    compileOnly 'org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT'
 
     // -- dream-platform --
     implementation "cc.dreamcode.platform:core:1.9.4"
@@ -65,23 +70,23 @@ dependencies {
 shadowJar {
     checkstyleTest
 
-    archiveFileName = "Dream-Template-Bukkit-${project.version}.jar"
+    archiveFileName = "LastHub-Economy-${project.version}.jar"
 
     minimize()
 
-    relocate "com.cryptomorin", "cc.dreamcode.template.libs.com.cryptomorin"
-    relocate "eu.okaeri", "cc.dreamcode.template.libs.eu.okaeri"
+    relocate "com.cryptomorin", "me.night.economy.libs.com.cryptomorin"
+    relocate "eu.okaeri", "me.night.economy.libs.eu.okaeri"
 
-    relocate "cc.dreamcode.platform", "cc.dreamcode.template.libs.cc.dreamcode.platform"
-    relocate "cc.dreamcode.utilities", "cc.dreamcode.template.libs.cc.dreamcode.utilities"
-    relocate "cc.dreamcode.menu", "cc.dreamcode.template.libs.cc.dreamcode.menu"
-    relocate "cc.dreamcode.command", "cc.dreamcode.template.libs.cc.dreamcode.command"
-    relocate "cc.dreamcode.notice", "cc.dreamcode.template.libs.cc.dreamcode.notice"
+    relocate "cc.dreamcode.platform", "me.night.economy.libs.cc.dreamcode.platform"
+    relocate "cc.dreamcode.utilities", "me.night.economy.libs.cc.dreamcode.utilities"
+    relocate "cc.dreamcode.menu", "me.night.economy.libs.cc.dreamcode.menu"
+    relocate "cc.dreamcode.command", "me.night.economy.libs.cc.dreamcode.command"
+    relocate "cc.dreamcode.notice", "me.night.economy.libs.cc.dreamcode.notice"
 
-    relocate "org.bson", "cc.dreamcode.template.libs.org.bson"
-    relocate "com.mongodb", "cc.dreamcode.template.libs.com.mongodb"
-    relocate "com.zaxxer", "cc.dreamcode.template.libs.com.zaxxer"
-    relocate "org.slf4j", "cc.dreamcode.template.libs.org.slf4j"
-    relocate "org.json", "cc.dreamcode.template.libs.org.json"
-    relocate "com.google.gson", "cc.dreamcode.template.libs.com.google.gson"
+    relocate "org.bson", "me.night.economy.libs.org.bson"
+    relocate "com.mongodb", "me.night.economy.libs.com.mongodb"
+    relocate "com.zaxxer", "me.night.economy.libs.com.zaxxer"
+    relocate "org.slf4j", "me.night.economy.libs.org.slf4j"
+    relocate "org.json", "me.night.economy.libs.org.json"
+    relocate "com.google.gson", "me.night.economy.libs.com.google.gson"
 }

@@ -1,8 +1,10 @@
-main: "cc.dreamcode.template.BukkitTemplatePlugin"
-version: "1.0-InDEV"
-name: "Dream-Template"
-description: "Dream-Template plugin written by dreamcode.cc"
-website: "https://dreamcode.cc"
-author: "author"
-prefix: "Dream-Template-Bukkit"
+main: "me.night.economy.EconomyPlugin"
+version: "1.0"
+name: "LastHub-Economy"
+description: "LastHub economy plugin"
+website: "https://dc.helldev.pl"
+author: "nightusio"
+prefix: "LastHub-Economy"
 api-version: 1.13
+
+depend: [Vault, Essentials]
