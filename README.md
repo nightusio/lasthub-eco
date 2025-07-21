@@ -1,9 +1,6 @@
-Working with template:
+lasthub-eco:
 -----
-Clone this repo to your account, rename package name, then by pressing ``CTRL + SHIFT + R`` change all variables to your plugin name. (Template --> PluginName).
-
-Finally, remove all **unnecessary** template functions.
-(support mc versions can easily be removed by deleting implement in settings.gradle)
+Some old economy plugin, making my old repositories public.
 
 Build to jar by ``shadowJar`` gradle task.
 
@@ -12,12 +9,6 @@ Build to jar by ``shadowJar`` gradle task.
 - Spigot-api 1.8.8, 1.12.2, 1.16.5, 1.17.1, 1.18.2, 1.19.3, 1.19.4, 1.20.1 (or implement by self)
 - Java SDK. (java 11+, target 8)
 
-Working with NMS:
------
-- Add ProtocolLib to build.gradle and work with it.
-- Add nms into mc-version modules.
-
-------
 
 **Libraries**: <33
 - [Dream-Platform](https://github.com/DreamPoland/dream-platform) by [DreamCode](https://github.com/DreamPoland)
